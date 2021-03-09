@@ -7,7 +7,7 @@ public class Parole {
 	private List<String> parole;
 	
 	public Parole() {
-		parole = new ArrayList<>();
+		parole = new LinkedList<>();
 	}
 	
 	public void addParola(String p) {
@@ -23,6 +23,14 @@ public class Parole {
 	
 	public void reset() {
 		parole.clear();
+	}
+	
+	public void cancella(String p) {
+		
+		for(String s : parole)
+			if(s.equals(p))
+				if(parole.remove(p))
+					return;
 	}
 
 }
